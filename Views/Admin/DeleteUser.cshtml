@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<head>
+    <title>
+        admin panel
+    </title>
+
+
+</head>
+
+<body style=" background-color:peachpuff">
+    <div>
+
+        <img src="~/content/themes/base/images/tab-left.gif" alt=" " width=" 1380" height="150" />
+
+        <div>
+            <div class="box-body">
+                <table id="example2" class="table table-bordered table-hover">
+                    <thead style=" background-color:gray">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Type </th>
+                            <th>Password </th>
+                           
+
+                        </tr>
+
+                    </thead>
+
+
+                    @foreach (fp.Models.User i in Model)
+                    {
+                        <tr>
+
+                            <td>
+                                @i.Id
+                            </td>
+                            <td>
+                                @i.Type
+                            </td>
+                            <td>
+                                @i.Email
+                            </td>
+                            <td>
+                                @i.Name
+                            </td>
+                            <td>
+                                @i.Password
+                            </td>
+                           
+                            <td>
+                                @Html.ActionLink("Del", "Delete3", new { id = i.Id })
+                            </td>
+                        </tr>
+                    }
+
+
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>

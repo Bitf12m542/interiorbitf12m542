@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "WishList";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using fp.Models
+
+@foreach (Favoruite f in ViewBag.images)
+{
+    <img src=@f.Image.Path alt="" width=" 375" height=" 250">
+    <h3>Description</h3><span style="border:double">@f.Image.Description</span>
+
+}

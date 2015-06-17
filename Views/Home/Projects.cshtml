@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projects - Origin Architects Website</title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap.js"> </script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div id="background-lightyellow">
+        background
+    </div>
+    <div class="page">
+        <div class="project-page">
+            
+            <div class="body">
+                <div class="content-project">
+                    <div>
+                        <h3>Projects </h3>
+                    </div>
+                    <div class="navigation">
+                        <span>Select any Category:</span>
+                        <ul>
+                            <li class="selected">
+                                <a href="#">All</a>
+                            </li>
+                            <li>
+                                <a href="/Project/living_room">Living Room</a>
+                            </li>
+                            <li>
+                                <a href="/Project/dining_room">Dining Room</a>
+                            </li>
+                            <li>
+                                <a href="/Project/toned_bedroom">Bedroom</a>
+                            </li>
+                            <li>
+                                <a href="/Project/bathroom">Bathroom</a>
+                            </li>
+                            <li>
+                                <a href="/Account/logout">LOGOUT</a>
+                            </li>
+                        </ul>
+
+                    
+                       <center><img src="/Files/@Session["Image"]" class="img-circle" width="300" height="150" /></center>
+                                                
+                                               
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="/Project/living_room"><img src="~/content/themes/base/images/project-gallery1.jpg" alt=""></a> <span><a href="/Home/living_room">Purple Hues Modern Living Room</a></span>
+                            </li>
+                            <li>
+                                <a href="/Project/dining_room"><img src="~/content/themes/base/images/project-gallery2.jpg" alt=""></a> <span><a href="/Home/dining_room">Warm And Cozy Modern Dining Room</a></span>
+                            </li>
+                            <li>
+                                <a href="/Project/toned_bedroom"><img src="~/content/themes/base/images/project-gallery3.jpg" alt=""></a> <span><a href="/Home/toned_bedroom">Clean And Simple Earth Toned Master Bedroom</a></span>
+                            </li>
+                            <li>
+                                <a href="/Home/kids_bedroom"><img src="~/content/themes/base/images/project-gallery4.jpg" alt=""></a> <span><a href="/Home/kids_bedroom">Unisex Kids Bedroom</a></span>
+                            </li>
+                            <li>
+                                <a href="/Project/bathroom"><img src="~/content/themes/base/images/project-gallery5.jpg" alt=""></a> <span><a href="/Home/bathroom">Victorian Bathroom With Makeup Area</a></span>
+                            </li>
+                            <li>
+                                <a href="/Home/landscaping"><img src="~/content/themes/base/images/project-gallery6.jpg" alt=""></a> <span><a href="/Home/landscaping">Spanish Influenced Garden</a></span>
+                            </li>
+                        </ul>
+                        <div class="paging">
+                            <ul>
+                                <li class="selected">
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">></a>
+                                </li>
+                            </ul>
+                            <span>Page 1 of 2</span>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</body>

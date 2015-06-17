@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Interior";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using fp.Models
+<body>
+
+    <div class="page">
+        <div class="project-page">
+
+            <div class="body">
+                <div class="content-project">
+                    <div>
+                        <h3>Dining area Antique and description </h3>
+                    </div>
+                    <div class="navigation">
+                        <span>Select any Category:</span>
+                        <ul>
+                            <li class="selected">
+                                <a href="#">All</a>
+                            </li>
+                            <li>
+                                <a href="/Project/living_room">Living Room</a>
+                            </li>
+                            <li>
+                                <a href="/Project/dining_room">Dining Room</a>
+                            </li>
+                            <li>
+                                <a href="/Project/toned_bedroom">Bedroom</a>
+                            </li>
+                            <li>
+                                <a href="/Project/bathroom">Bathroom</a>
+                            </li>
+                            <li>
+                                <a href="/Project/Comments">Comments</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            @foreach (Image r in ViewBag.image)
+                            {
+                                <li>
+
+                                    <img src=@r.Path alt="" width=" 375" height=" 250"><h3>Description</h3><span>@r.Description</span>
+
+
+                                    <br>
+
+                                    <form action="/BedRoom/AddFavourite" method="post">
+                                        <input type="hidden" name="iid" value="@r.Id" />
+
+                                        <button class="btn-success btn-lg"> Add Favourite</button>
+
+                                    </form>
+
+                                    <form action="/BedRoom/WishList" method="post">
+                                        <button class="btn-success btn-lg"> View WishList</button>
+                                    </form>
+
+
+                                    <h3><span> Previous Comments</span></h3>
+                                    @foreach (Comment c in r.Comments)
+                                    {
+                                        @c.UComment
+                                        <form role="form" action="/BedRoom/Delete1" method="post">
+                                            <input value="@c.Id" name="Id" type="hidden" />
+                                            <button class="btn-warning btn-lg">Delete</button>
+
+                                        </form>
+                                        <br>
+                                        <br>
+                                    }
+
+
+
+
+                                    <form action="/BedRoom/AddComment" method="post">
+
+                                        <br>
+                                        <input type="hidden" name="Iid" value="@r.Id" />
+                                        <input type="text" placeholder="Comment" class="form-control" name="Comment" onblur="this.value=!this.value?'Coment':this.value;" onfocus="this.select()" onclick="this.value='';">
+                                        <br>
+                                        <input class="btn-success" type="submit" name="submit" value="submit" />
+
+                                    </form>
+
+                                </li>
+                            }
+
+                        </ul>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+

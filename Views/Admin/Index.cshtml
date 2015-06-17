@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<head>
+    <title>
+        admin panel
+    </title>
+    
+
+</head>
+
+
+
+               
+<body style=" background-color:peachpuff">
+
+    
+    <div>
+
+    <img src="~/content/themes/base/images/tab-left.gif" alt=" "width=" 1380" height="150"/>
+    <center><font color="Blue">  <h1>ADMIN AREA </h1></font> </center>
+    <center>    <img src="~/content/themes/base/images/man.gif" alt="" width="80" height="80" /></center>    
+    <br />
+        <div>
+            <center >
+                <img src="/Files/@Session["Image"]" class="img-circle" width="180" height="180" />
+                <br />
+                @Html.ActionLink("Add New Category", "Add")
+                <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead style=" background-color:gray">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name></th>
+                                <th>Description</th>
+                                <th>Price </th>
+                                <th>Update </th>
+                                <th>Delete </th>
+                                @*<th>Search </th>*@
+
+
+                            </tr>
+
+                        </thead>
+
+
+                        @foreach (fp.Models.Project i in Model)
+                        {
+                            <tr>
+
+                                <td>
+                                    @i.Id
+                                </td>
+                                <td>
+                                    @i.Name
+                                </td>
+                                <td>
+                                    @i.Description
+                                </td>
+                                <td>
+                                    @i.Price
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Update", new { id = i.Id })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Delete", "Delete1", new { id = i.Id })
+                                </td>
+                                @*<td>
+                                    @Html.ActionLink("Delete2", "Delete2", new { id = i.Id })
+                                </td>*@
+                                @*<td>
+                                    @Html.ActionLink("Search", "Search", new { id = i.Id })
+                                </td>*@
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+               
+               @Html.ActionLink("Add New furniture","Add")
+                <br />
+                @Html.ActionLink("Add New Interior", "Add")
+
+               
+
+
+            </center>
+        </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@model fp.Models.User
+<head>
+    <title>
+        admin panel
+    </title>
+
+</head>
+
+<body style=" background-color:peachpuff">
+
+
+
+    <div>
+        <img src="~/content/themes/base/images/tab-left.gif" alt=" " width=" 1380" height="150" />
+    </div>
+    <div class="row">
+
+        <br />
+
+        <center>   <h2>Select  Category to Delete<h2> </center>
+        <br />
+
+
+        <center>
+            <div class="inputs">
+
+                @using (Html.BeginForm("AddFurniture", "Admin", FormMethod.Post))
+                {
+
+                    @Html.LabelFor(m => m.Id)
+                    <br />
+                    @Html.TextBoxFor(m => m.Id)
+                    <br />
+
+                    <input type="submit" value="Delete3" />
+
+
+
+                }
+
+            </div>
+        </center>
+
+
+    </div>
+</body>
+

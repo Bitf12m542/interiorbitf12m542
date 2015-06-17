@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@model fp.Models.Image
+
+<head>
+    <title>
+        admin panel
+    </title>
+
+</head>
+
+<body style=" background-color:peachpuff">
+
+
+
+    <div>
+        <img src="~/content/themes/base/images/tab-left.gif" alt=" " width=" 1380" height="150" />
+    </div>
+    <div class="row">
+
+        <br />
+
+        
+
+           <center>
+          
+            @using (Html.BeginForm("EditType", "Admin", FormMethod.Post))
+            {
+
+
+                @Html.HiddenFor(m => m.Id)
+                @Html.LabelFor(m => m.Category)
+                @Html.EditorFor(m => m.Category)
+                <br />
+                <br />
+                @Html.LabelFor(m => m.Type)
+                @Html.EditorFor(m => m.Type)
+                <br />
+                <br />
+                @Html.LabelFor(m => m.Description)
+                @Html.EditorFor(m => m.Description)
+                <br />
+                <br />
+                 @Html.LabelFor(m => m.Path)
+                @Html.EditorFor(m => m.Path)
+
+                <input type="submit" value="Save" />
+            }
+
+
+
+               </center>
+
+
+
+
+    </div>
+</body>
+

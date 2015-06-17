@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f7fc21b4a6b74121a0e0ade43bd1f26a" Name="Diagram1">
+        <EntityTypeShape EntityType="MyDatabaseModel.Contact" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Furniture" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Interior" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Project" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyDatabaseModel.User" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="MyDatabaseModel.projectf" ManuallyRouted="false" />
+        <AssociationConnector Association="MyDatabaseModel.projf" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Image" Width="1.5" PointX="2.5" PointY="7.375" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Comment" Width="1.5" PointX="7.875" PointY="7" />
+        <AssociationConnector Association="MyDatabaseModel.FK_Comments_ToTable" />
+        <AssociationConnector Association="MyDatabaseModel.FK_Comments_ToTable_1" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Favoruite" Width="1.5" PointX="5.75" PointY="10" />
+        <AssociationConnector Association="MyDatabaseModel.FK_Favoruite_ToTable" />
+        <AssociationConnector Association="MyDatabaseModel.FK_Favoruite_ToTable_1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

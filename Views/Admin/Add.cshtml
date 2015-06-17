@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@model fp.Models.Project
+        
+
+           
+
+<head>
+<title>
+    admin panel
+</title>
+
+</head>
+
+<body style=" background-color:peachpuff">
+
+
+
+    <div>
+        <img src="~/content/themes/base/images/tab-left.gif" alt=" " width=" 1380" height="150" />
+    </div>
+    <div class="row">
+        
+        
+       <center> <h3>ADD   PROJECTS HERE  </h3> </center>
+            
+           @*<center> <h2>Select  Category to Add </h2>  </center>
+        <br />
+        <center><select category="category" name="Id"> </center>
+                <option selected>Project
+                <option>Furniture
+                <option>Interior
+            
+                </option> </select>
+        <br />*@
+  
+         <center>   <div class="inputs">
+
+                @using (Html.BeginForm("AddProject", "Admin", FormMethod.Post))
+                {
+                    @Html.LabelFor(m => m.Id)
+                    <br />
+                    @Html.TextBoxFor(m => m.Id)
+                    <br />
+                    @Html.LabelFor(m => m.Name)
+                    <br />
+                    @Html.TextBoxFor(m => m.Name)
+                    <br />
+                    @Html.LabelFor(m => m.Description)
+                    <br />
+                    @Html.TextBoxFor(m => m.Description)
+                    <br />
+                    @Html.LabelFor(m => m.Price)
+                    <br />
+                    @Html.TextBoxFor(m => m.Price)
+                    <br />
+                    <input type="submit" value="Added" />
+
+
+
+                }
+                <br />
+                <h3>Add Furniture here</h3>
+                @using (Html.BeginForm("AddFurniture", "Admin", FormMethod.Post))
+                {
+                    @Html.LabelFor(m => m.Id)
+                    <br />
+                    @Html.TextBoxFor(m => m.Id)
+                    <br />
+                    @Html.LabelFor(m => m.Name)
+                    <br />
+                    @Html.TextBoxFor(m => m.Name)
+                    <br />
+                    @Html.LabelFor(m => m.Description)
+                    <br />
+                    @Html.TextBoxFor(m => m.Description)
+                    <br />
+                    @Html.LabelFor(m => m.Price)
+                    <br />
+                    @Html.TextBoxFor(m => m.Price)
+                    <br />
+                    <input type="submit" value="Added" />
+
+                }
+                        <br />
+                        <h3>Add Interior here</h3>
+                        @using (Html.BeginForm("AddInterior", "Admin", FormMethod.Post))
+                        {
+                            @Html.LabelFor(m => m.Id)
+                            <br />
+                            @Html.TextBoxFor(m => m.Id)
+                            <br />
+                            @Html.LabelFor(m => m.Name)
+                            <br />
+                            @Html.TextBoxFor(m => m.Name)
+                            <br />
+                            @Html.LabelFor(m => m.Description)
+                            <br />
+                            @Html.TextBoxFor(m => m.Description)
+                            <br />
+                            @Html.LabelFor(m => m.Price)
+                            <br />
+                            @Html.TextBoxFor(m => m.Price)
+                            <br />
+                            <input type="submit" value="Added" />
+
+                        }
+
+
+
+
+
+
+
+</center>
+
+            </div>
+     
+
+</body>

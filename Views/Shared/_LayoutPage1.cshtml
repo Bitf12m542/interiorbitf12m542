@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/js/npm.js"></script>
+    <script src="~/Content/js/bootstrap.js"></script>
+
+
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    
+    <h2 style="font-family:'Colonna MT';font-size:50px;padding-left:500px">Admin Panel</h2>
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div style="padding-left:6em" class="navbar-header">
+            <a class="navbar-brand" href="#">  <font color="Blue">  <h4></h4></font> </a>
+        </div>
+        <div class="navbar-inverse pull-right">
+            <a class="navbar-brand" href="/Admin/Add">ADD</a>
+        </div>
+        <div class="navbar-inverse pull-right">
+            <a class="navbar-brand" href="/Admin/Update">UPDATE</a>
+        </div>
+        <div class="navbar-inverse pull-right">
+            <a class="navbar-brand" href="/Admin/Delete">DELETE</a>
+        </div>
+        <div class="navbar-inverse pull-right">
+            <a class="navbar-brand" href="/Admin/Search">SEARCH</a>
+        </div>
+        <div class="navbar-inverse pull-right">
+            <a class="navbar-brand" href="/Admin/AddType">AddType</a>
+        </div>
+        <div class="navbar-inverse pull-right">
+            <a class="navbar-brand" href="/Admin/DeleteUser">DeleteUser</a>
+        </div>
+        <div class="navbar-inverse pull-right">
+            <a class="navbar-brand" href="/Account/logout">SIGNOUT</a>
+        </div>
+    </nav>
+    
+        @RenderBody()
+    @Scripts.Render("~/bundles/jquery");
+    @RenderSection("scripts", required: false);
+</body>
+</html>

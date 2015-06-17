@@ -1,0 +1,82 @@
+﻿@using fp.Models;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="page">
+        <div>
+            @{
+                User us = (User)Session["us"];
+                
+            }
+            @if(us != null)
+            {
+                <h3>Welcome..@us.Name</h3>
+                
+            }
+            else
+            {
+                <h3>Welcome</h3>
+            }
+                
+            
+        </div>
+        <div class="sidebar">
+            <a href="/Home/index" id="logo"><img src="~/content/themes/base/images/logo.png" alt="logo"></a>
+            <ul>
+                <li class="selected home">
+                @Html.ActionLink("Index", "Index", "Home")
+                </li>
+                <li class="about">
+                    @Html.ActionLink("About", "About", "Home")
+                </li>
+                
+                <li class="projects">
+                    @Html.ActionLink("Projects", "Projects", "Home")
+                </li>
+               
+                <li class="contact">
+                    @Html.ActionLink("Contact", "Contact", "Home")
+                </li>
+                @if(Session["Id"] == null)
+                {
+                <li class="signin">
+               
+                    @Html.ActionLink("SignIn", "SignIn", "Account")
+            </li>
+                <li class="signup">
+
+                    @Html.ActionLink("SignUP", "SignUP", "Account")
+                </li>
+                
+                }
+                @if (Session["Id"]!= null)
+                {
+                    <li class="signin">
+
+                        @Html.ActionLink("logout", "logout", "Account")
+                    </li>
+
+                    
+                   
+
+                }
+            </ul>
+            </div>
+
+        </div>
+
+        @RenderBody()
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
